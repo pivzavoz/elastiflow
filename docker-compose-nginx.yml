@@ -4,7 +4,7 @@ services:
   elastiflow-elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
     container_name: elastiflow-elasticsearch
-    restart: 'no'
+    restart: 'unless-stopped'
     ulimits:
       memlock:
         soft: -1
@@ -44,7 +44,7 @@ services:
   elastiflow-kibana:
     image: docker.elastic.co/kibana/kibana:7.8.1
     container_name: elastiflow-kibana
-    restart: 'no'
+    restart: 'unless-stopped'
     depends_on:
       - elastiflow-elasticsearch
     network_mode: host
@@ -67,7 +67,7 @@ services:
   elastiflow-logstash:
     image: robcowart/elastiflow-logstash:4.0.1
     container_name: elastiflow-logstash
-    restart: 'no'
+    restart: 'unless-stopped'
     depends_on:
       - elastiflow-elasticsearch
     network_mode: host
