@@ -1,7 +1,8 @@
 # 1. Создаем папку elastiflow4.
-
-   Копируем из репозитория файлы docker-compose-nginx.yml и nginx.conf в папку elastiflow4.
-
+```text
+ mkdir /var/lib/elastiflow_es
+```
+Копируем из репозитория файлы docker-compose-nginx.yml и nginx.conf в папку elastiflow4.
 # 2. Создаем папку для индексов
 ```text
  sudo mkdir /var/lib/elastiflow_es 
