@@ -19,7 +19,7 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out ngin
  
  sudo sh -c "echo -n 'it:' >> .htpasswd"
 
-6.Добавляем в файл с ползователями пароль для этого пользователей
+6. Добавляем в файл с ползователями пароль для этого пользователей
  
  sudo sh -c "openssl passwd -apr1 >> .htpasswd"
 
